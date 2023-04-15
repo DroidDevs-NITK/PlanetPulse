@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
 
         replaceFragment(DashboardFragment())
 
+        window.setStatusBarColor(this.getResources().getColor(R.color.color_appBar))
         binding.bottomNav.setOnItemSelectedListener {
 
             when(it.itemId) {

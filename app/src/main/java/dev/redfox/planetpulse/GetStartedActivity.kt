@@ -6,7 +6,10 @@ import android.graphics.Color
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import dev.redfox.planetpulse.databinding.ActivityGetStartedBinding
 import dev.redfox.planetpulse.databinding.ActivityMainBinding
 
@@ -18,15 +21,34 @@ class GetStartedActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityGetStartedBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        var uri: Uri = Uri.parse("android.resource://" + packageName + "/" + R.raw.introvideo)
-        binding.videoView.layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
-        binding.videoView.setVideoURI(uri)
-        binding.videoView.start()
-        binding.videoView.setOnPreparedListener { it.isLooping = true }
+
+
+        Handler().postDelayed({
+            binding.tapHere.visibility = ViewGroup.VISIBLE
+            val animation = AnimationUtils.loadAnimation(
+                this, R.anim.slide_up)
+            //appending animation to textView
+            binding.tapHere.startAnimation(animation)
+        }, 2000)
+
+        binding.tapHere.setOnClickListener {
+            binding.btnGetStarted.visibility = View.VISIBLE
+            binding.tapHere.visibility = View.INVISIBLE
+        }
 
         binding.btnGetStarted.setOnClickListener {
             val intent = Intent(this, QuestionsActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        var uri: Uri = Uri.parse("android.resource://" + packageName + "/" + R.raw.videointro)
+        binding.videoView.layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
+        binding.videoView.setVideoURI(uri)
+        binding.videoView.start()
+        binding.videoView.setOnPreparedListener { it.isLooping = true }
     }
 }

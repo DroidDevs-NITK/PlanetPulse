@@ -26,14 +26,17 @@ class DashboardFragment : Fragment() {
             binding.indiaProgressBar.setProgress(50,true)
         }
 
+        return binding.root
+    }
+
+    override fun onResume() {
+        super.onResume()
         var uri: Uri = Uri.parse("android.resource://" + "dev.redfox.planetpulse" + "/" + R.raw.videodashboard)
         binding.dashboardVideo.layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
         binding.dashboardVideo.setVideoURI(uri)
         binding.dashboardVideo.start()
         binding.dashboardVideo.setOnPreparedListener { it.isLooping = true }
 
-
-        return binding.root
     }
 
 }
