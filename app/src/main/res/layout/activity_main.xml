@@ -34,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        app:backgroundTint="@color/white"
+        app:backgroundTint="#0043C685"
         app:itemIconTint="@color/black"
         app:itemRippleColor="@color/material_red"
         app:itemTextColor="@color/black"

@@ -24,8 +24,8 @@
         android:title="Shop"/>
 
     <item
-        android:id="@+id/news"
+        android:id="@+id/tips"
         android:icon="@drawable/ic_news"
-        android:title="News"/>
+        android:title="Tips"/>
 
 </menu>
