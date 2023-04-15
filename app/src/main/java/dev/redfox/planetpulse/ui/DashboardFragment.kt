@@ -2,12 +2,12 @@ package dev.redfox.planetpulse.ui
 
 import android.os.Build
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import dev.redfox.planetpulse.R
+import androidx.fragment.app.Fragment
 import dev.redfox.planetpulse.databinding.FragmentDashboardBinding
+
 
 class DashboardFragment : Fragment() {
 
@@ -23,6 +23,8 @@ class DashboardFragment : Fragment() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             binding.indiaProgressBar.setProgress(50,true)
         }
+
+
         return binding.root
     }
 
