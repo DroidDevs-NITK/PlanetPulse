@@ -1,6 +1,7 @@
 package dev.redfox.planetpulse
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.graphics.Color
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
@@ -24,7 +25,8 @@ class GetStartedActivity : AppCompatActivity() {
         binding.videoView.setOnPreparedListener { it.isLooping = true }
 
         binding.btnGetStarted.setOnClickListener {
-
+            val intent = Intent(this, QuestionsActivity::class.java)
+            startActivity(intent)
         }
     }
 }

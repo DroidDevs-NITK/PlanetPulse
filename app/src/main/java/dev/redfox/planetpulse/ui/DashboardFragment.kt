@@ -1,11 +1,13 @@
 package dev.redfox.planetpulse.ui
 
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import dev.redfox.planetpulse.R
 import dev.redfox.planetpulse.databinding.FragmentDashboardBinding
 
 
@@ -23,6 +25,12 @@ class DashboardFragment : Fragment() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             binding.indiaProgressBar.setProgress(50,true)
         }
+
+        var uri: Uri = Uri.parse("android.resource://" + "dev.redfox.planetpulse" + "/" + R.raw.videodashboard)
+        binding.dashboardVideo.layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
+        binding.dashboardVideo.setVideoURI(uri)
+        binding.dashboardVideo.start()
+        binding.dashboardVideo.setOnPreparedListener { it.isLooping = true }
 
 
         return binding.root

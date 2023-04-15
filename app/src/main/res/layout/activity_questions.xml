@@ -6,11 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/bottomNav"
         >
 
         <fragment
@@ -19,20 +19,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:defaultNavHost="true"
-            app:navGraph="@navigation/navigation"
+            app:navGraph="@navigation/question_nav"
             />
 
     </FrameLayout>
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNav"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        app:backgroundTint="@color/white"
-        app:itemIconTint="@color/black"
-        app:itemRippleColor="@color/material_red"
-        app:itemTextColor="@color/black"
-        app:menu="@menu/bottom_nav" />
 
 </RelativeLayout>
