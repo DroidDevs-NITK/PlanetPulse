@@ -1,6 +1,7 @@
 package dev.redfox.planetpulse
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.net.Uri
@@ -38,8 +39,19 @@ class GetStartedActivity : AppCompatActivity() {
         }
 
         binding.btnGetStarted.setOnClickListener {
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
+
+            val sharedPreference =
+                getSharedPreferences("LOGIN", Context.MODE_PRIVATE)
+            val checkLogin: Boolean = sharedPreference.getBoolean("hasLoggedIn",false)
+
+            if(checkLogin == true){
+                val intent = Intent(this, QuestionsActivity::class.java)
+                startActivity(intent)
+            } else {
+                val intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
+            }
+
         }
     }
 

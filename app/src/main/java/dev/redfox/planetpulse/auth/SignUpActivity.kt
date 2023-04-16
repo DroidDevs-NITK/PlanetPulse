@@ -66,14 +66,19 @@ class SignUpActivity : AppCompatActivity() {
                 firebaseAuth.createUserWithEmailAndPassword(email, pass)
                     .addOnSuccessListener {
 
-                        database = FirebaseDatabase.getInstance().getReference("employees")
+                        database = FirebaseDatabase.getInstance().getReference("users")
 
                         database.child(EncodeString(email).toString()).child("Name").setValue(name)
                         database.child(EncodeString(email).toString()).child("Email")
                             .setValue(EncodeString(email).toString())
 
-//                        binding.etEmail.text?.clear()
-//                        binding.etName.text?.clear()
+                        database.child(EncodeString(email).toString()).child("Questions").child("q1").setValue(0)
+                        database.child(EncodeString(email).toString()).child("Questions").child("q2").setValue(0)
+                        database.child(EncodeString(email).toString()).child("Questions").child("q3").setValue(0)
+                        database.child(EncodeString(email).toString()).child("Questions").child("q4").setValue(0)
+                        database.child(EncodeString(email).toString()).child("Questions").child("q5").setValue(0)
+
+
 
                         Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show()
 
