@@ -1,4 +1,4 @@
-# Planetpulse
+# Planet Pulse
 Planetpulse is an Android application that allows users to track their carbon footprint and receive personalized tips and resources to reduce their environmental impact. In addition, the app features a custom chat bot panel to provide tailored responses and a shop where users can purchase eco-friendly products.
 
 ## Features
