@@ -25,7 +25,7 @@
 
     <item
         android:id="@+id/tips"
-        android:icon="@drawable/ic_news"
+        android:icon="@drawable/ic_lightbulb"
         android:title="Tips"/>
 
 </menu>
