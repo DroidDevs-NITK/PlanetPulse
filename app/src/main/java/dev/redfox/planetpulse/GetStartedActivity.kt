@@ -10,6 +10,7 @@ import android.os.Handler
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
+import dev.redfox.planetpulse.auth.LoginActivity
 import dev.redfox.planetpulse.databinding.ActivityGetStartedBinding
 import dev.redfox.planetpulse.databinding.ActivityMainBinding
 
@@ -37,7 +38,7 @@ class GetStartedActivity : AppCompatActivity() {
         }
 
         binding.btnGetStarted.setOnClickListener {
-            val intent = Intent(this, QuestionsActivity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
     }
