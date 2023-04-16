@@ -23,7 +23,7 @@ class DashboardFragment : Fragment() {
         _binding = FragmentDashboardBinding.inflate(inflater, container, false)
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            binding.indiaProgressBar.setProgress(50,true)
+            binding.indiaProgressBar.setProgress(50, true)
         }
 
         return binding.root
@@ -31,8 +31,12 @@ class DashboardFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        var uri: Uri = Uri.parse("android.resource://" + "dev.redfox.planetpulse" + "/" + R.raw.videodashboard)
-        binding.dashboardVideo.layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
+        var uri: Uri =
+            Uri.parse("android.resource://" + "dev.redfox.planetpulse" + "/" + R.raw.videodashboard)
+        binding.dashboardVideo.layoutParams = ViewGroup.LayoutParams(
+            ViewGroup.LayoutParams.MATCH_PARENT,
+            ViewGroup.LayoutParams.MATCH_PARENT
+        )
         binding.dashboardVideo.setVideoURI(uri)
         binding.dashboardVideo.start()
         binding.dashboardVideo.setOnPreparedListener { it.isLooping = true }
