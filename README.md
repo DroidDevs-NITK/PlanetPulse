@@ -14,6 +14,14 @@ To use Planetpulse, simply download the app from the Google Play Store and creat
 ## Technology Used
 Planetpulse is an Android application built using Java and XML. The app uses Firebase Authentication and Realtime Database to manage user accounts and store data. The custom chat bot panel is powered by Dialogflow, a natural language processing platform.
 
+## App Interface
+![WhatsApp Image 2023-04-16 at 12 11 21 PM](https://user-images.githubusercontent.com/84273332/232278358-7bdee0ff-0389-4c33-a306-9c429ccb9276.jpeg)
+![WhatsApp Image 2023-04-16 at 12 11 19 PM](https://user-images.githubusercontent.com/84273332/232278373-a881b2a9-8359-4c4b-b3ad-ac6010f0080b.jpeg)
+![WhatsApp Image 2023-04-16 at 12 11 20 PM](https://user-images.githubusercontent.com/84273332/232278364-21979c4f-d5f3-4b70-8059-d7a200619d93.jpeg)
+![WhatsApp Image 2023-04-16 at 12 11 19 PM (1)](https://user-images.githubusercontent.com/84273332/232278368-255ec253-a7c1-4378-a413-40decf1d8c7d.jpeg)
+![WhatsApp Image 2023-04-16 at 12 11 18 PM](https://user-images.githubusercontent.com/84273332/232278378-c4159519-cef7-4666-8411-12e669244e18.jpeg)
+
+
 ## Contributing
 If you'd like to contribute to Planetpulse, please fork the repository and make changes as you'd like. Pull requests are welcome!
 
