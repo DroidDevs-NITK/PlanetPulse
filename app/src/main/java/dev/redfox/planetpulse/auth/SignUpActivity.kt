@@ -77,6 +77,7 @@ class SignUpActivity : AppCompatActivity() {
                         database.child(EncodeString(email).toString()).child("Questions").child("q3").setValue(0)
                         database.child(EncodeString(email).toString()).child("Questions").child("q4").setValue(0)
                         database.child(EncodeString(email).toString()).child("Questions").child("q5").setValue(0)
+                        database.child(EncodeString(email).toString()).child("Total").setValue(0)
 
 
 
